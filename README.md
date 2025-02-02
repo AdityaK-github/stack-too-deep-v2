@@ -1,192 +1,154 @@
-# Eliza 🤖
+=======
+# Blockchain Hackathon Project: Personalized Eliza AI Agent
 
-<div align="center">
-  <img src="./docs/static/img/eliza_banner.jpg" alt="Eliza Banner" width="100%" />
-</div>
+## Project Overview
+Welcome to our *Blockchain Hackathon Project! We have developed a **personalized Eliza AI agent* capable of interacting directly with *MetaMask* to perform Ethereum (ETH) transfers between accounts. The agent leverages natural language processing (NLP) to understand user prompts and execute blockchain transactions seamlessly.
 
-<div align="center">
+Additionally, we attempted to implement two more advanced features:
+1. *Memory Storage*: Storing wallet addresses in a unique variable for quick access.
+2. *NFT Upload to Pinata*: Uploading NFTs to Pinata using natural language prompts.
 
-📑 [Technical Report](https://arxiv.org/pdf/2501.06781) |  📖 [Documentation](https://elizaos.github.io/eliza/) | 🎯 [Examples](https://github.com/thejoven/awesome-eliza)
+While the core functionality of ETH transfers is fully operational, the additional features faced integration challenges and are not fully implemented.
 
-</div>
+---
 
-## 🌍 README Translations
+## Features
 
-[中文说明](i18n/readme/README_CN.md) | [日本語の説明](i18n/readme/README_JA.md) | [한국어 설명](i18n/readme/README_KOR.md) | [Persian](i18n/readme/README_FA.md) | [Français](i18n/readme/README_FR.md) | [Português](i18n/readme/README_PTBR.md) | [Türkçe](i18n/readme/README_TR.md) | [Русский](i18n/readme/README_RU.md) | [Español](i18n/readme/README_ES.md) | [Italiano](i18n/readme/README_IT.md) | [ไทย](i18n/readme/README_TH.md) | [Deutsch](i18n/readme/README_DE.md) | [Tiếng Việt](i18n/readme/README_VI.md) | [עִברִית](i18n/readme/README_HE.md) | [Tagalog](i18n/readme/README_TG.md) | [Polski](i18n/readme/README_PL.md) | [Arabic](i18n/readme/README_AR.md) | [Hungarian](i18n/readme/README_HU.md) | [Srpski](i18n/readme/README_RS.md) | [Română](i18n/readme/README_RO.md) | [Nederlands](i18n/readme/README_NL.md) | [Ελληνικά](i18n/readme/README_GR.md)
+### 1. *ETH Transfers via MetaMask*
+- The Eliza AI agent can interact with MetaMask to:
+  - Send ETH from one account to another.
+  - Confirm transactions with the user before execution.
+  - Handle natural language prompts like:
+    - "Send 0.1 ETH to 0x1234..."
+    - "Transfer 1 ETH to Alice."
 
-## 🚩 Overview
+### 2. *Memory Storage (Incomplete)*
+- The agent was designed to store wallet addresses in a unique variable for quick access.
+  - Example: "Save 0x1234... as Alice."
+  - Future goal: Retrieve saved addresses for transactions (e.g., "Send 0.5 ETH to Alice").
 
-<div align="center">
-  <img src="./docs/static/img/eliza_diagram.png" alt="Eliza Diagram" width="100%" />
-</div>
+### 3. *NFT Upload to Pinata (Incomplete)*
+- The agent was intended to upload NFTs to Pinata using natural language prompts.
+  - Example: "Upload this image as an NFT."
+  - Future goal: Automatically generate metadata and upload to Pinata.
 
-## ✨ Features
+---
 
-- 🛠️ Full-featured Discord, Twitter and Telegram connectors
-- 🔗 Support for every model (Llama, Grok, OpenAI, Anthropic, Gemini, etc.)
-- 👥 Multi-agent and room support
-- 📚 Easily ingest and interact with your documents
-- 💾 Retrievable memory and document store
-- 🚀 Highly extensible - create your own actions and clients
-- 📦 Just works!
+## Technologies Used
 
-## Video Tutorials
+### Backend
+- *Eliza AI Agent*: Core NLP engine for understanding user prompts.
+- *Web3.js*: Interacting with the Ethereum blockchain and MetaMask.
+- *Node.js*: Backend server for handling API requests.
+- *Express.js*: Framework for building the backend API.
 
-[AI Agent Dev School](https://www.youtube.com/watch?v=ArptLpQiKfI&list=PLx5pnFXdPTRzWla0RaOxALTSTnVq53fKL)
+### Frontend
+- *React.js*: Frontend framework for building the user interface.
+- *MetaMask*: Browser extension for wallet integration.
+- *Tailwind CSS*: Styling the UI components.
 
-## 🎯 Use Cases
+### Additional Tools
+- *Pinata*: For NFT storage (incomplete integration).
+- *Ethereum Testnet*: For testing ETH transfers (e.g., Goerli or Sepolia).
 
-- 🤖 Chatbots
-- 🕵️ Autonomous Agents
-- 📈 Business Process Handling
-- 🎮 Video Game NPCs
-- 🧠 Trading
+---
 
-## 🚀 Quick Start
+## How It Works
+
+### 1. *ETH Transfers*
+1. The user provides a natural language prompt (e.g., "Send 0.1 ETH to 0x1234...").
+2. The Eliza AI agent parses the prompt to extract:
+   - The amount of ETH to send.
+   - The recipient's wallet address.
+3. The agent interacts with MetaMask to:
+   - Initiate the transaction.
+   - Confirm the transaction with the user.
+4. Once confirmed, the transaction is executed on the Ethereum blockchain.
+
+### 2. *Memory Storage (Incomplete)*
+1. The user provides a prompt to save a wallet address (e.g., "Save 0x1234... as Alice").
+2. The agent stores the address in a unique variable for future use.
+3. Future goal: Retrieve the saved address for transactions (e.g., "Send 0.5 ETH to Alice").
+
+### 3. *NFT Upload to Pinata (Incomplete)*
+1. The user provides a prompt to upload an NFT (e.g., "Upload this image as an NFT").
+2. The agent extracts the image file and metadata from the prompt.
+3. Future goal: Upload the NFT to Pinata and generate a transaction hash.
+
+---
+
+## Setup Instructions
 
 ### Prerequisites
+- *Node.js* (v16 or higher)
+- *MetaMask* browser extension
+- *Ethereum Testnet* account (e.g., Goerli or Sepolia)
 
-- [Python 2.7+](https://www.python.org/downloads/)
-- [Node.js 23+](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-- [pnpm](https://pnpm.io/installation)
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/blockchain-hackathon-project.git
+2. Use following link to quick setup to eliza framework
+    https://elizaos.github.io/eliza/docs/quickstart/
 
-> **Note for Windows Users:** [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install-manual) is required.
+# Future Enhancements
 
-### Use the Starter (Recommended)
+## Persistent Memory Storage
+Implement a robust database system for storing and retrieving wallet addresses.
 
-```bash
-git clone https://github.com/elizaos/eliza-starter.git
-cd eliza-starter
-cp .env.example .env
-pnpm i && pnpm build && pnpm start
-```
+### Key Features:
+- Secure wallet address indexing
+- Transaction history tracking
+- User wallet mapping
+- Address verification mechanisms
 
-### Manually Start Eliza (Only recommended if you know what you are doing)
+### Implementation Considerations:
+- Database schema design for efficient queries
+- Data encryption for sensitive information
+- Backup and recovery systems
+- Performance optimization for large-scale operations
 
-#### Checkout the latest release
+## NFT Upload Integration
+Complete Pinata integration for streamlined NFT uploads [pinata.cloud](https://pinata.cloud).
 
-```bash
-# Clone the repository
-git clone https://github.com/elizaos/eliza.git
+### Core Components:
+- IPFS file storage interface
+- Metadata management system
+- Upload progress tracking
+- Content verification
 
-# This project iterates fast, so we recommend checking out the latest release
-git checkout $(git describe --tags --abbrev=0)
-# If the above doesn't checkout the latest release, this should work:
-# git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
-```
+### Technical Requirements:
+- Pinata SDK integration
+- File handling and validation
+- Metadata formatting compliance
+- Error handling and retry mechanisms
 
-#### Edit the .env file
+## Multi-Chain Support
+Extend blockchain compatibility to support multiple networks.
 
-Copy .env.example to .env and fill in the appropriate values.
+### Target Networks:
+- Polygon
+- Binance Smart Chain
+- Additional EVM-compatible chains
 
-```
-cp .env.example .env
-```
+### Implementation Strategy:
+- Chain-specific configuration management
+- Cross-chain transaction handling
+- Network fee optimization
+- Gas price monitoring systems
 
-Note: .env is optional. If you're planning to run multiple distinct agents, you can pass secrets through the character JSON
+## Enhanced Security
+Implement comprehensive security measures for transactions and authentication.
 
-#### Start Eliza
+### Security Layers:
+- Multi-factor authentication
+- Transaction verification protocols
+- Wallet address validation
+- Access control mechanisms
 
-```bash
-pnpm i
-pnpm build
-pnpm start
-
-# The project iterates fast, sometimes you need to clean the project if you are coming back to the project
-pnpm clean
-```
-
-### Interact via Browser
-
-Once the agent is running, you should see the message to run "pnpm start:client" at the end.
-
-Open another terminal, move to the same directory, run the command below, then follow the URL to chat with your agent.
-
-```bash
-pnpm start:client
-```
-
-Then read the [Documentation](https://elizaos.github.io/eliza/) to learn how to customize your Eliza.
-
----
-
-### Automatically Start Eliza
-
-The start script provides an automated way to set up and run Eliza:
-
-```bash
-sh scripts/start.sh
-```
-
-For detailed instructions on using the start script, including character management and troubleshooting, see our [Start Script Guide](./docs/docs/guides/start-script.md).
-
-> **Note**: The start script handles all dependencies, environment setup, and character management automatically.
-
----
-
-### Modify Character
-
-1. Open `packages/core/src/defaultCharacter.ts` to modify the default character. Uncomment and edit.
-
-2. To load custom characters:
-    - Use `pnpm start --characters="path/to/your/character.json"`
-    - Multiple character files can be loaded simultaneously
-3. Connect with X (Twitter)
-    - change `"clients": []` to `"clients": ["twitter"]` in the character file to connect with X
-
----
-
-#### Additional Requirements
-
-You may need to install Sharp. If you see an error when starting up, try installing it with the following command:
-
-```
-pnpm install --include=optional sharp
-```
-
----
-
-### Start Eliza with Gitpod
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/elizaos/eliza/tree/main)
-
----
-
-### Deploy Eliza in one click 
-
-Use [Fleek](https://fleek.xyz/eliza/) to deploy Eliza in one click. This opens Eliza to non-developers and provides the following options to build your agent:
-1. Start with a template
-2. Build characterfile from scratch
-3. Upload pre-made characterfile
-
-Click [here](https://fleek.xyz/eliza/) to get started!
-
----
-
-### Community & contact
-
-- [GitHub Issues](https://github.com/elizaos/eliza/issues). Best for: bugs you encounter using Eliza, and feature proposals.
-- [Discord](https://discord.gg/ai16z). Best for: sharing your applications and hanging out with the community.
-
-## Citation
-
-We now have a [paper](https://arxiv.org/pdf/2501.06781) you can cite for the Eliza OS:
-```bibtex
-@article{walters2025eliza,
-  title={Eliza: A Web3 friendly AI Agent Operating System},
-  author={Walters, Shaw and Gao, Sam and Nerd, Shakker and Da, Feng and Williams, Warren and Meng, Ting-Chien and Han, Hunter and He, Frank and Zhang, Allen and Wu, Ming and others},
-  journal={arXiv preprint arXiv:2501.06781},
-  year={2025}
-}
-```
-
-## Contributors
-
-<a href="https://github.com/elizaos/eliza/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=elizaos/eliza" alt="Eliza project contributors" />
-</a>
-
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=elizaos/eliza&type=Date)](https://star-history.com/#elizaos/eliza&Date)
+### Implementation Details:
+- Secure key management
+- Transaction signing verification
+- Rate limiting and monitoring
+- Security audit logging
+>>>>>>> 65db6277316d69d5d27189ed89d7e9d58424521d
