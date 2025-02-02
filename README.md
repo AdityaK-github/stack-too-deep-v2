@@ -87,7 +87,7 @@ While the core functionality of ETH transfers is fully operational, the addition
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/blockchain-hackathon-project.git
+    https://github.com/AdityaK-github/stack-too-deep-v2
 2. Use following link to quick setup to eliza framework
     https://elizaos.github.io/eliza/docs/quickstart/
 
